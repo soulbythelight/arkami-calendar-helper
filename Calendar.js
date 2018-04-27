@@ -77,7 +77,12 @@ let Calendar = (function() {
     },
     enumerateFirstWord(word) {
       if (word.toUpperCase() === 'LAST') {
-        return 30;
+        if (!this.year) {
+            this.year = new Date().getFullYear()
+        }
+        var d = new Date(this.year, this.month + 1, 0);
+        console.log(d)
+        return d;
       }
       if (word.toUpperCase() === 'FIRST') {
         return 1;
