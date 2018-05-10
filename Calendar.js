@@ -139,6 +139,3 @@ class Calendar {
     }
  
 }
-
-calendar = new Calendar();
-console.log(calendar.get('2nd day of may 2018'))
